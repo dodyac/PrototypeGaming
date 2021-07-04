@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="buttonStyle">
+        <item name="cornerRadius">@dimen/margin_10dp</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tilStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">#272A30</item>
+        <item name="boxCornerRadiusTopStart">@dimen/card_corner_small</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/card_corner_small</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/card_corner_small</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/card_corner_small</item>
+        <item name="boxStrokeWidth">0dp</item>
+        <item name="boxStrokeWidthFocused">0dp</item>
+        <item name="android:layout_marginBottom">@dimen/margin_10dp</item>
+        <item name="hintTextColor">@color/white</item>
+        <item name="materialThemeOverlay">@style/etStyle</item>
+    </style>
+
+    <style name="etStyle" parent="@style/Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="android:textColorPrimary">@color/white</item>
+    </style>
+
+    <style name="sliderStyle">
+        <item name="sliderAnimationDuration">600</item>
+        <item name="sliderAutoCycleDirection">back_and_forth</item>
+        <item name="sliderAutoCycleEnabled">true</item>
+        <item name="sliderIndicatorAnimationDuration">600</item>
+        <item name="sliderIndicatorGravity">center_horizontal|bottom</item>
+        <item name="sliderIndicatorMarginTop">-25dp</item>
+        <item name="sliderIndicatorOrientation">horizontal</item>
+        <item name="sliderIndicatorPadding">1.2dp</item>
+        <item name="sliderIndicatorRadius">1.2dp</item>
+        <item name="sliderIndicatorSelectedColor">?colorPrimary</item>
+        <item name="sliderIndicatorUnselectedColor">#C6C6C6</item>
+        <item name="sliderStartAutoCycle">true</item>
+    </style>
+</resources>

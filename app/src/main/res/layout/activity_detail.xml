@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="@dimen/padding_parent"
+    tools:context=".ui.activity.ActivityDetail">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/back"
+                android:layout_width="@dimen/photo_size_small"
+                android:layout_height="@dimen/photo_size_small"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/bg_rounded_extra_small"
+                android:backgroundTint="#272A30"
+                android:padding="@dimen/margin_5dp"
+                android:src="@drawable/ic_back" />
+
+            <ImageButton
+                android:id="@+id/fav"
+                android:layout_width="@dimen/photo_size_small"
+                android:layout_height="@dimen/photo_size_small"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_rounded_extra_small"
+                android:backgroundTint="#272A30"
+                android:padding="@dimen/margin_5dp"
+                android:src="@drawable/ic_fav" />
+
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/imageSlider"
+                style="@style/sliderStyle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_200dp"
+                android:layout_below="@id/back"
+                android:layout_marginTop="@dimen/padding_parent"
+                android:clipToPadding="false"
+                app:sliderScrollTimeInSec="3" />
+
+            <com.acxdev.commonFunction.widget.ShimmerText
+                android:id="@+id/genre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imageSlider"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:layout_marginEnd="@dimen/padding_parent_small"
+                android:layout_toStartOf="@id/setting"
+                android:textColor="@color/green"
+                app:shimmerTextWidth="0.5" />
+
+            <ImageButton
+                android:id="@+id/setting"
+                android:layout_width="@dimen/photo_size_extra_small"
+                android:layout_height="@dimen/photo_size_extra_small"
+                android:layout_alignBottom="@id/genre"
+                android:layout_marginEnd="@dimen/padding_parent_small"
+                android:layout_toStartOf="@id/info"
+                android:background="@drawable/bg_rounded_extra_small"
+                android:backgroundTint="#272A30"
+                android:padding="@dimen/margin_5dp"
+                android:src="@drawable/ic_setting" />
+
+            <ImageButton
+                android:id="@+id/info"
+                android:layout_width="@dimen/photo_size_extra_small"
+                android:layout_height="@dimen/photo_size_extra_small"
+                android:layout_alignBottom="@id/genre"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_rounded_extra_small"
+                android:backgroundTint="#272A30"
+                android:padding="@dimen/margin_5dp"
+                android:src="@drawable/ic_info" />
+
+            <com.acxdev.commonFunction.widget.ShimmerText
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/genre"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="@dimen/padding_parent"
+                android:layout_marginEnd="@dimen/padding_parent_small"
+                android:layout_toStartOf="@id/price"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_extra_large"
+                android:textStyle="bold"
+                app:shimmerTextWidth="0.5" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/name"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_rounded_extra_small"
+                android:backgroundTint="@color/textSecondary"
+                android:paddingStart="@dimen/padding_parent"
+                android:paddingTop="@dimen/padding_parent_small"
+                android:paddingEnd="@dimen/padding_parent"
+                android:paddingBottom="@dimen/padding_parent_small"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/descCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/name"
+                android:layout_marginTop="@dimen/padding_parent"
+                app:cardBackgroundColor="@color/cardBackground"
+                app:cardUseCompatPadding="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:id="@+id/line"
+                        android:layout_width="@dimen/margin_5dp"
+                        android:layout_height="0dp"
+                        android:background="@drawable/bg_rounded"
+                        android:backgroundTint="@color/green"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/padding_parent"
+                        android:text="Description"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_large"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/line"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.acxdev.commonFunction.widget.ShimmerText
+                        android:id="@+id/desc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/textview1"
+                        android:layout_margin="@dimen/padding_parent"
+                        android:paddingBottom="@dimen/padding_parent"
+                        android:textColor="@color/textSecondary"
+                        android:textSize="@dimen/text_small"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/line"
+                        app:layout_constraintTop_toBottomOf="@+id/textview1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/requirementText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/descCard"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:text="Requirements"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/requirement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/requirementText"
+                android:layout_marginTop="@dimen/padding_parent_small"
+                android:layout_marginBottom="?actionBarSize"
+                tools:itemCount="1"
+                tools:listitem="@layout/row_spec" />
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/play"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/padding_parent" />
+</RelativeLayout>

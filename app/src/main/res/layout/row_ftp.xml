@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/cardBackground"
+    app:cardCornerRadius="@dimen/margin_10dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/padding_parent">
+
+        <com.acxdev.commonFunction.widget.ShimmerImage
+            android:id="@+id/image"
+            android:layout_width="@dimen/photo_size"
+            android:layout_height="@dimen/photo_size"
+            android:layout_centerVertical="true" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:layout_toStartOf="@id/setting"
+            android:layout_toEndOf="@id/image"
+            android:textColor="@color/green"
+            android:textSize="@dimen/text_small"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/genre"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/margin_2dp"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:layout_toStartOf="@id/setting"
+            android:layout_toEndOf="@id/image"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/setting"
+            android:layout_width="@dimen/photo_size_extra_small"
+            android:layout_height="@dimen/photo_size_extra_small"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="@dimen/padding_parent_small"
+            android:layout_toStartOf="@id/info"
+            android:background="@drawable/bg_rounded_extra_small"
+            android:backgroundTint="#272A30"
+            android:padding="@dimen/margin_5dp"
+            android:src="@drawable/ic_setting" />
+
+        <ImageButton
+            android:id="@+id/info"
+            android:layout_width="@dimen/photo_size_extra_small"
+            android:layout_height="@dimen/photo_size_extra_small"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/bg_rounded_extra_small"
+            android:backgroundTint="#272A30"
+            android:padding="@dimen/margin_5dp"
+            android:src="@drawable/ic_info" />
+
+        <com.acxdev.commonFunction.widget.ShimmerText
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_marginStart="@dimen/padding_parent_small"
+            android:layout_marginTop="@dimen/margin_4dp"
+            android:layout_toEndOf="@id/image"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:textColor="@color/textSecondary"
+            android:textSize="@dimen/text_small" />
+    </RelativeLayout>
+</com.google.android.material.card.MaterialCardView>

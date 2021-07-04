@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:fillViewport="true"
+    tools:context=".ui.fragment.FragmentHome">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_parent">
+
+                <ImageView
+                    android:id="@+id/photo"
+                    android:layout_width="@dimen/photo_size"
+                    android:layout_height="@dimen/photo_size"
+                    android:src="@drawable/ic_john" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="@dimen/padding_parent_small"
+                    android:layout_marginEnd="@dimen/padding_parent_small"
+                    android:layout_toStartOf="@id/cart"
+                    android:layout_toEndOf="@id/photo"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/skill"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Expert"
+                        android:textColor="@color/textSecondary" />
+
+                    <TextView
+                        android:id="@+id/name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="John Cena"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <ImageButton
+                    android:id="@+id/cart"
+                    android:layout_width="@dimen/photo_size_extra_small"
+                    android:layout_height="@dimen/photo_size_extra_small"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="@dimen/padding_parent_small"
+                    android:layout_toStartOf="@id/notification"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/margin_5dp"
+                    android:src="@drawable/ic_cart" />
+
+                <ImageButton
+                    android:id="@+id/notification"
+                    android:layout_width="@dimen/photo_size_extra_small"
+                    android:layout_height="@dimen/photo_size_extra_small"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:padding="@dimen/margin_5dp"
+                    android:src="@drawable/ic_notification" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/tilStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_30dp"
+                android:hint="Search..."
+                app:endIconDrawable="@drawable/ic_search"
+                app:endIconMode="custom"
+                app:endIconTint="@null">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/padding_parent"
+            android:paddingEnd="@dimen/padding_parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_header" />
+
+        <TextView
+            android:id="@+id/popularGamesText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:padding="@dimen/padding_parent"
+            android:text="Popular Games"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/header"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_4dp"
+            android:padding="@dimen/padding_parent"
+            android:text="See All"
+            android:textColor="@color/green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/popularGames"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popularGamesText"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/padding_parent"
+            android:paddingEnd="@dimen/padding_parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_popular" />
+
+        <TextView
+            android:id="@+id/freeToPlayText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popularGames"
+            android:layout_marginStart="@dimen/margin_4dp"
+            android:padding="@dimen/padding_parent"
+            android:text="Free to Play"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/popularGames"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/margin_4dp"
+            android:padding="@dimen/padding_parent"
+            android:text="See All"
+            android:textColor="@color/green" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/freeToPlay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/freeToPlayText"
+            android:layout_marginBottom="?actionBarSize"
+            android:clipToPadding="false"
+            android:paddingStart="@dimen/padding_parent"
+            android:paddingEnd="@dimen/padding_parent"
+            tools:itemCount="1"
+            tools:listitem="@layout/row_ftp" />
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>

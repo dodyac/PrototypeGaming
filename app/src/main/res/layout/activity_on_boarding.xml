@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.activity.ActivityOnBoarding">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_200dp"
+        android:layout_alignParentEnd="true"
+        android:rotation="180"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_corner" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/margin_200dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitStart"
+        android:src="@drawable/ic_corner" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/next" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/next"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-150dp"
+        app:dotsColor="@color/default_color"
+        app:dotsCornerRadius="@dimen/margin_4dp"
+        app:dotsSize="@dimen/margin_8dp"
+        app:dotsSpacing="2dp"
+        app:dotsWidthFactor="2.5"
+        app:progressMode="true"
+        app:selectedDotColor="?colorPrimary" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/next"
+        style="@style/buttonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/margin_30dp"
+        android:layout_marginEnd="@dimen/margin_30dp"
+        android:layout_marginBottom="@dimen/margin_30dp"
+        android:text="Get Started"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_large" />
+</RelativeLayout>

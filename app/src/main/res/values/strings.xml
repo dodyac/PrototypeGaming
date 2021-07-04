@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PrototypeGaming</string>
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="descDota">Dota 2 is a multiplayer online battle arena (MOBA) video game developed and published by Valve. The game is a sequel to Defense of the Ancients (DotA), which was a community-created mod for Blizzard Entertainment\'s Warcraft III: Reign of Chaos. Dota 2 is played in matches between two teams of five players, with each team occupying and defending their own separate base on the map</string>
+    <string name="moba">MOBA</string>
+    <string name="tacticalshooter">Tactical Shooter</string>
+    <string name="descValorant">Valorant is a free-to-play first-person hero shooter developed and published by Riot Games, for Microsoft Windows. First teased under the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by an official release on June 2, 2020. The development of the game started in 2014.</string>
+    <string name="rpg">RPG</string>
+    <string name="survivalHorror">Survival Horror</string>
+    <string name="actionAdventure">Action Adventure</string>
+    <string name="valorant">Valorant</string>
+    <string name="dota2">DOTA 2</string>
+    <string name="genshinImpact">Genshin Impact</string>
+    <string name="revillage">Resident Evil Village</string>
+    <string name="gtav">Grand Theft Auto V</string>
+    <string name="descGenshin">Genshin Impact is an action role-playing game developed and published by miHoYo. The game features an open-world environment and action-based battle system using elemental magic and character-switching, and uses gacha game monetization for players to obtain new characters, weapons, and other resources. The game is online-only and features a limited multiplayer mode allowing up to four players to play together. It was released for Microsoft Windows, PlayStation 4, Android, iOS in September 2020, for PlayStation 5 in April 2021, and for Nintendo Switch sometime later.</string>
+    <string name="descRe">Resident Evil Village is a survival horror game developed and published by Capcom. The sequel to Resident Evil 7: Biohazard (2017), players control Ethan Winters, who is searching for his kidnapped daughter; after a fateful encounter with Chris Redfield, he finds himself in a village filled with mutant creatures. While Village maintains the Resident Evil series\' survival horror elements, the game adopts a more action-oriented gameplay style compared to its predecessor.</string>
+    <string name="descGta">Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first main entry in the Grand Theft Auto series since 2008\'s Grand Theft Auto IV. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three protagonists—retired bank robber Michael De Santa, street gangster Franklin Clinton, and drug dealer and arms smuggler Trevor Philips—and their attempts to commit heists while under pressure from a corrupt government agency and powerful criminals. The open world design lets players freely roam San Andreas\' open countryside and the fictional city of Los Santos, based on Los Angeles.</string>
+    <string name="freeToPlay">Free to Play</string>
+    <string name="addToCart">Add to Cart</string>
+    <string name="playNow">Play Now</string>
+    <string name="apex">Apex Legends</string>
+    <string name="battleRoyale">Battle royale</string>
+    <string name="descApex">Apex Legends is a free-to-play hero battle royale game developed by Respawn Entertainment and published by Electronic Arts. It was released for Microsoft Windows, PlayStation 4, and Xbox One in February 2019, and for Nintendo Switch in March 2021. The game supports cross-platform play. The game is set in the same science fiction universe as Respawn Entertainment\'s Titanfall series. A mobile version of the game specially designed for touchscreens titled Apex Legends Mobile has also been announced which is scheduled to be fully released by 2022 on Android and iOS.</string>
+</resources>
